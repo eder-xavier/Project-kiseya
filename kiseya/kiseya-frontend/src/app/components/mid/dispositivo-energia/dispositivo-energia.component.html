@@ -1,0 +1,44 @@
+
+
+<div class="container">
+  <!-- Lista de dispositivos -->
+  <div class="dispositivo-card" *ngFor="let dispositivo of dispositivosEnergia">
+    <div class="dispositivo-info">
+      <div class="tipo">{{ dispositivo.tipo }}</div>
+      <div class="capacidade">{{ dispositivo.capacidadeGeracao }} kW</div>
+      <div class="quantidade">{{ dispositivo.quantidade }} unidades</div>
+      <div class="usuario-info">
+        <p>Usuário: {{ dispositivo.usuario.nome }}</p>
+        <!-- Adicione mais informações do usuário conforme necessário -->
+      </div>
+      <div class="localizacao-info">
+        <p>Localização: {{ dispositivo.localizacao.latitude }}, {{ dispositivo.localizacao.longitude }}</p>
+        <!-- Adicione mais informações de localização conforme necessário -->
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button class="edit-button">Editar</button>
+      <button class="delete-button">Excluir</button>
+    </div>
+  </div>
+
+  <!-- Formulário para adicionar dispositivo -->
+  <div class="adicionar-dispositivo-form">
+    <h2>Adicionar Dispositivo</h2>
+    <form (ngSubmit)="addDispositivoEnergia()">
+      <!-- Outros campos do formulário -->
+    
+      <label for="tipo">Tipo:</label>
+      <input type="text" id="tipo" name="tipo" [(ngModel)]="newDispositivo.tipo" required>
+    
+      <label for="capacidadeGeracao">Capacidade de Geração (kW):</label>
+      <input type="number" id="capacidadeGeracao" name="capacidadeGeracao" [(ngModel)]="newDispositivo.capacidadeGeracao" required>
+    
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" name="quantidade" [(ngModel)]="newDispositivo.quantidade" required>
+    
+      <button type="submit">Adicionar Dispositivo</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+</head>
+
+<body>
+
+    <section class="wrapper">
+
+        <a routerLink="/home">
+            <span class="material-symbols-outlined" id="close">
+                close
+            </span>
+        </a>
+
+        <section class="form-box login">
+
+            <h2>Cadastro</h2>
+
+            <form (ngSubmit)="cadastrarUsuario()" #cadastroForm="ngForm">
+
+                <article class="input-box">
+
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    <input type="text" id="nomeCompleto" name="nomeCompleto" [(ngModel)]="usuario.nomeCompleto" required>
+                    <label>Nome Completo</label>
+
+                </article>
+
+                <article class="input-box">
+
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <input type="email" id="email" name="email" [(ngModel)]="usuario.email" required>
+                    <label>Email</label>
+
+                </article>
+
+                <article class="input-box">
+
+                    <span class="material-symbols-outlined">
+                        demography
+                    </span>
+                    <input type="text" id="cpfCnpj" name="cpfCnpj" [(ngModel)]="usuario.cpfCnpj" required>
+                    <label>CPF/CNPJ</label>
+
+                </article>
+
+                <article class="input-box" style="display: none;">
+
+                    <label for="isPessoaFisica">Pessoa Física:</label>
+                    <input type="checkbox" id="isPessoaFisica" name="isPessoaFisica" [(ngModel)]="usuario.isPessoaFisica">
+
+                </article>
+
+                <article class="input-box">
+
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+                    <input type="password" id="senha" name="senha" [(ngModel)]="usuario.senha" required>
+                    <label>Senha</label>
+
+                </article>
+
+                <article class="login-register">
+                    <p>Já tem uma conta? 
+                    <a routerLink="/home/login" class="register-link">Faça Login!</a>
+                    </p>
+            
+                </article>
+
+                <button type="submit" class="btn" [disabled]="!cadastroForm.valid">Cadastrar</button>
+
+            </form>
+
+        </section>
+
+    </section>
+
+
+</body>
+
+</html>

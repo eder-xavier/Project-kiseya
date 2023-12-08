@@ -1,0 +1,127 @@
+/* dispositivo-energia.component.css */
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Cartão do Dispositivo */
+  .dispositivo-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Informações do Dispositivo */
+  .dispositivo-info {
+    flex: 1;
+  }
+  
+  .tipo {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00260b;
+  }
+  
+  .capacidade {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #000a24;
+  }
+  
+  .quantidade {
+    margin-top: 8px;
+    font-size: 1em;
+    color: #000a24;
+  }
+  
+  /* Informações do Usuário e Localização */
+  .usuario-info,
+  .localizacao-info {
+    margin-top: 16px;
+  }
+  
+  .usuario-info p,
+  .localizacao-info p {
+    margin: 4px 0;
+    font-size: 0.8em;
+  }
+  
+  /* Botões de Edição e Exclusão */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  .edit-button,
+  .delete-button {
+    background-color: #00260b;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 48%;
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #000a24;
+  }
+  
+  /* Formulário para Adicionar Dispositivo */
+  .adicionar-dispositivo-form {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 26%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .adicionar-dispositivo-form h2 {
+    color: #00260b;
+  }
+  
+  /* Estilo dos Rótulos */
+  label {
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: bold;
+  }
+  
+  /* Campos de Entrada */
+  input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Botão de Adicionar Dispositivo */
+  button[type="submit"] {
+    background-color: #00260b;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #000a24;
+  }
+  

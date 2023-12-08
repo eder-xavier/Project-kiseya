@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div *ngIf="loggedInUser">
+    <h2>{{ loggedInUser.nomeCompleto }}</h2>
+    <p>Email: {{ loggedInUser.email }}</p>
+
+    <!-- Adicionando a exibição da foto de perfil -->
+    <div *ngIf="loggedInUser.fotoPerfil">
+      <img [src]="loggedInUser.fotoPerfil" alt="Foto de Perfil">
+    </div>
+    <!-- Fim da exibição da foto de perfil -->
+
+    <!-- Outros detalhes do perfil -->
+  </div>
+</body>
+
+</html>

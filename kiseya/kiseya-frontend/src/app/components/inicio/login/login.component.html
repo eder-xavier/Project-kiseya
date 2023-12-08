@@ -1,0 +1,59 @@
+
+  
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="../../../../assets/js/inicio/anima.js"></script>
+
+  <section class="wrapper">
+
+    <a routerLink="/home">
+      <span class="material-symbols-outlined" id="close">
+          close
+          </span>    
+    </a>
+
+    <section class="form-box login">
+    <h2>Login</h2>
+    <form (ngSubmit)="realizarLogin()" #loginForm="ngForm">
+
+      <article class="input-box">
+                
+        <span class="material-symbols-outlined">
+            mail
+        </span>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+        <label>Email</label>
+
+      </article>
+      
+      <article class="input-box">
+                
+        <span class="material-symbols-outlined">
+            lock
+        </span>
+        <input type="password" id="senha" name="senha" [(ngModel)]="senha" required>
+        <label>Senha</label>
+
+      </article>
+                
+      <article class="login-register">
+          <p>Não tem uma conta? 
+          <a routerLink="/home/cadastro" class="register-link">Cadastre-se!</a>
+          </p>
+  
+      </article>
+
+      <button type="submit" class="btn" [disabled]="!loginForm.valid">Entrar</button>
+    </form>
+    </section>
+  </section>
+</body>
+</html>
